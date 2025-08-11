@@ -7,4 +7,10 @@ package org.example.files.readerclasses;
  * the software train itself.
  */
 public interface Reader {
+
+    void open();
+    boolean hasNext();
+    Record next();
+    void close();
+
 }
