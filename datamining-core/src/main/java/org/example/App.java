@@ -12,7 +12,4 @@ public class App {
         System.out.println("Hello World!");
     }
 
-    String file = " datamining-core/src/main/resources/Breast_cancer_dataset.csv";
-
-    CSVReader csvReader = new CSVReader(file, )
 }
