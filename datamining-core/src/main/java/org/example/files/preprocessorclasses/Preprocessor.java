@@ -1,4 +1,7 @@
 package org.example.files.preprocessorclasses;
 
-public class Preprocessor {
+import org.example.files.DataRecord;
+
+public interface Preprocessor {
+    DataRecord apply(DataRecord in);
 }
