@@ -12,8 +12,21 @@ import java.nio.file.Path;
 import java.security.Key;
 import java.util.*;
 
+/**
+ * CSVReader implements a Reader for CSV files. Designed to handle
+ * CSV files with a specified delimiter and optional header.
+ */
 public class CSVReader implements Reader<DataRecord> {
 
+    /**
+     * Default delimiter for CSV files. Delimiter is used to separate fields in a CSV line.
+     * Common delimiters include comma (','), semicolon (';'), and tab ('\t').
+     * This class uses a single character delimiter.
+     *
+     * hasHeader indicates whether the first line of the CSV file contains headers.
+     * If true, the first line is treated as headers and later lines are treated as data.
+     * If false, all lines are treated as data records.
+     */
     private final char delimiter;
     private final boolean hasHeader;
 

@@ -9,6 +9,11 @@ import java.util.*;
 
 import java.util.List;
 
+/**
+ * PipelineRunner orchestrates a sequence of preprocessing steps on data records read from a source.
+ * It reads records using a Reader, applies a series of Preprocessors, and writes the final.
+ */
+
 public class PipelineRunner {
 
     private final Reader<DataRecord> reader;
@@ -37,6 +42,18 @@ public class PipelineRunner {
         this.sink =sink;
     }
 
+    /**
+     *
+     * @param source provided resource for the reader as a String (e.g., file path).
+     * @throws IOException thrown if there is an error reading the source or processing records.
+     * Runs the pipeline on the specified source.
+     * By running the run() method, the PipelineRunner will:
+     * 1. Open the reader with the given source.
+     * 2. Read records one by one.
+     * 3. Apply each preprocessor step to the record.
+     * 4. Pass the processed record to the sink.
+     * 5. Close the reader and finalize the sink.
+     */
     public void run(String source) throws IOException {
         try {
             reader.open(source);
