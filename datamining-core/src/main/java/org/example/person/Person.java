@@ -2,13 +2,11 @@ package org.example.person;
 
 public interface Person {
 
-    String getName();
+     int getId();
+     String getPassword();
 
-    int getAge();
-
-    void setName(String name);
-
-    void setAge(int age);
+     void setId(int id);
+     void setPassword(String password);
 
     boolean isValid();
 }

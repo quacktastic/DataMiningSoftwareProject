@@ -14,12 +14,11 @@ public class Access {
 
     public static void main(String[] args) {
 
-    // This is a placeholder for the main method.
-    // It is intended to be used for testing the access control system.
+        // This is a placeholder for the main method.
+        // It is intended to be used for testing the access control system.
         Scanner scanner = new Scanner(System.in);
         welcome();
         handleMenu(scanner);
-
 
 
     }
@@ -95,8 +94,27 @@ public class Access {
     }
 
 
+    public static void name(Scanner scanner) {
+        // Placeholder for name logic
+        System.out.println("Name logic goes here.");
+        System.out.println("Enter your name: ");
+        String name = scanner.next();
+        System.out.println("Hello, " + name + "! Welcome to the Access Control System.");
+    }
 
+    public static void surname(Scanner scanner) {
+        // Placeholder for surname logic
+        System.out.println("Surname logic goes here.");
+        System.out.println("Enter your surname: ");
+        String surname = scanner.next();
+        System.out.println("Hello, " + surname + "! Welcome to the Access Control System.");
+    }
 
-
-
+    public static void birthdate(Scanner scanner) {
+        // Placeholder for birthdate logic
+        System.out.println("Birthdate logic goes here.");
+        System.out.println("Enter your birth year: ");
+        String birthyear = scanner.next();
+        System.out.println("Hello! Your birth year is " + birthyear + ". Welcome to the Access Control System.");
+    }
 }

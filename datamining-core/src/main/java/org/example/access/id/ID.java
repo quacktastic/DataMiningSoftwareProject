@@ -2,7 +2,8 @@ package org.example.access.id;
 
 public interface ID {
 
-    String getID();
-    void setID(String id);
-    boolean isValid();
+    boolean idMatch(int id);
+
+    boolean isValidID(int id, String password);
+
 }

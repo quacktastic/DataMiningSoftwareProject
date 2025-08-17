@@ -1,0 +1,22 @@
+@startuml
+title Login / Register - Activity Flow
+
+start
+
+:Run the app;
+if (Register or Login) then (Register)
+    :Create new ID and password;
+    if(Unique ID?) then (yes)
+      :Store new ID and password;
+      :Display success message;
+    else (no)
+      if(Entered existing ID) then (yes);
+        :"Entered ID already exists";
+      else if(Entered existing password) then (yes);
+        :"Entered password already exists";
+
+
+
+
+stop
+@enduml
