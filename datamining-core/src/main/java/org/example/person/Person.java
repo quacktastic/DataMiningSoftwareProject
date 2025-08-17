@@ -2,10 +2,10 @@ package org.example.person;
 
 public interface Person {
 
-     int getId();
+     String getId();
      String getPassword();
 
-     void setId(int id);
+     void setId(String id);
      void setPassword(String password);
 
     boolean isValid();
