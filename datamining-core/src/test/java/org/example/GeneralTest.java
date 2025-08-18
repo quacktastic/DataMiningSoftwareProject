@@ -3,14 +3,13 @@ package org.example;
 import org.example.files.readerclasses.CSVReader;
 import org.junit.jupiter.api.Test;
 
-import java.net.URI;
 import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
 
-public class CSVReaderSmokeTest {
+public class GeneralTest {
 
 
     @Test
@@ -77,6 +76,9 @@ public class CSVReaderSmokeTest {
            }
 
        }
+
+         @Test
+         void
     }
 
 

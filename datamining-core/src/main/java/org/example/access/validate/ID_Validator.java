@@ -2,6 +2,12 @@ package org.example.access.validate;
 
 public class ID_Validator implements Validator<String>{
 
+    private String id;
+
+    public ID_Validator(String id) {
+        this.id = id;
+        // Constructor can be used for initialization if needed
+    }
 
     @Override
     public boolean isValid(String id) {
@@ -40,6 +46,12 @@ public class ID_Validator implements Validator<String>{
     public boolean validLength(String id) {
         int length = getIDLength(id);
         return length >= 5 && length <= 10;
+    }
+
+    public boolean isUniqueID(String id) {
+        // Placeholder for uniqueness check logic
+        // This could involve checking against a database or a list of existing IDs
+        return true; // Assuming the ID is unique for this example
     }
 
 }
