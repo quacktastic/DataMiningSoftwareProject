@@ -1,7 +1,9 @@
 package org.example.access.password;
 
+import org.example.access.validate.ID_Validator;
+
 public interface Password {
 
- void change(String password);
+ boolean passwordAccepted(String password);
 
 }

@@ -19,7 +19,7 @@ public class UserDataStorage {
     }
 
     public static void findUserID(String id) {
-        if(userDataMap.containsKey(id)) {
+        if (userDataMap.containsKey(id)) {
             System.out.println(id);
         } else {
             System.out.println("id not found.");
@@ -38,13 +38,25 @@ public class UserDataStorage {
         return userDataMap.containsKey(id);
     }
 
+    public static String getPasswordById(String id) {
+        return userDataMap.get(id);
+    }
+
     public static void saveUserToCSV(String id, String password, String filepath) {
 
-        try (FileWriter writer = new FileWriter(filepath, true)){
+        try (FileWriter writer = new FileWriter(filepath, true)) {
             writer.append(id).append(",").append(password).append("\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    public static boolean updatePasswordInMap(String id, String newPassword) {
+
+        if (!userDataMap.containsKey(id)) {
+            return false;
+        }
+        userDataMap.put(id, newPassword);
+        return true;
+    }
 }

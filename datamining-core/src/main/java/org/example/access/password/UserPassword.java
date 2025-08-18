@@ -12,8 +12,4 @@ public class UserPassword implements Password {
         return passwordValidator.isValid(password);
     }
 
-    public void change(String password) {
-
-    }
-
 }
