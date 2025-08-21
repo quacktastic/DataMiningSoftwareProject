@@ -1,6 +1,9 @@
 package org.example;
 
+import org.example.access.password.UserPassword;
+import org.example.access.validate.PasswordValidator;
 import org.example.files.readerclasses.CSVReader;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
@@ -76,9 +79,7 @@ public class GeneralTest {
            }
 
        }
-
-         @Test
-         void
     }
+
 
 

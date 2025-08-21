@@ -19,8 +19,6 @@ public class PasswordChangeService {
             System.out.println("Invalid id, password or new password. Please re-enter your inputs and try again.");
             return;
         }
-
-
         boolean changed = UserDataStorage.updatePasswordInMap(id, newPassword);
         if (changed) {
             System.out.println("Password updated successfully.");
@@ -44,6 +42,17 @@ public class PasswordChangeService {
     }
 
     public boolean passwordReadyToChange(String id, String password, String newPassword) {
+        if (!idFound(id)) {
+            System.out.println("ID not found!");
+        }
+
+        if (!passwordMatches(id, password)) {
+            System.out.println("ID doesn't match your current password!");
+        }
+
+        if (!newPasswordIsValid(newPassword)) {
+            System.out.println("New password doesn't match the validity rules!");
+        }
         return idFound(id) && passwordMatches(id, password) && newPasswordIsValid(newPassword);
     }
 
