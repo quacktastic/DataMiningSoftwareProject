@@ -59,4 +59,11 @@ public class UserDataStorage {
         userDataMap.put(id, newPassword);
         return true;
     }
+
+    public static void clearAllForTest() {
+        userDataMap.clear();
+    }
+
+
+
 }
